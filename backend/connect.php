@@ -3,7 +3,7 @@
 $servername = "localhost"; // Адрес сервера базы данных
 $username = "root"; // Имя пользователя базы данных
 $password = ""; // Пароль пользователя базы данных
-$database = "act_final"; // Имя базы данных
+$database = "act"; // Имя базы данных
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
