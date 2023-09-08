@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="frontend/css/style.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="frontend/js/auth.js"></script>
     <script src="frontend/js/form.js"></script>
     <title>Online act</title>
 </head>
@@ -48,8 +50,9 @@
                                         </div>
                                         
                                         <div class="col-sm-6 col-sm-offset-3 mx-auto">
-                                            <button type="submit" name="login-submit" id="login-submit" tabindex="3" class="form-control btn btn-login" value="LOGIN"><i class="fas fa-sign-in-alt"></i> Login</button>
+                                            <button type="submit" name="login-submit" id="login-submit" tabindex="3" class="form-control btn btn-login" value="LOGIN" autocomplete="off">Login</button>
                                         </div>
+                                        <div class="mess"></div>
                                     </form>
                                 </div>
                             </div>
