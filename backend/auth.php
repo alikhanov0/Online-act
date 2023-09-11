@@ -21,7 +21,6 @@ try {
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         $response = array('success' => true);
-
         // Возвращаем JSON-ответ
         
         $_SESSION['first_name'] = $user['first_name'];
@@ -35,8 +34,8 @@ try {
         // Неправильное имя пользователя или пароль
         $response = array('success' => false);
         
-        // Возвращаем JSON-ответ
         header("Content-Type: application/json");
+        // Возвращаем JSON-ответ
         echo json_encode($response);
         exit;
     }
@@ -44,12 +43,8 @@ try {
     // Логируем ошибку
     error_log("Ошибка при выполнении запроса: " . $e->getMessage(), 0);
     
-    // Устанавливаем HTTP статус ошибки
-    header("HTTP/1.1 500 Internal Server Error");
-    
     // Возвращаем JSON-ответ с информацией об ошибке
-    $response = array('error' => 'Внутренняя ошибка сервера');
-    header("Content-Type: application/json");
+    $response = array('error' => 'Connection error');
     echo json_encode($response);
     exit;
 }

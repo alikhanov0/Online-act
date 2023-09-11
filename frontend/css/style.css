@@ -19,7 +19,10 @@ body {
     padding-bottom: 10%;
 }
 
-
+#myChart {
+  width:80%;
+  height: 50%;
+}
 
   .panel-title {
     padding-top: 5%;

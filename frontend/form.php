@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="frontend/css/style.css">
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="frontend/js/auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="frontend/js/form.js"></script>
     <title>Online act</title>
 </head>
@@ -36,10 +35,10 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <form id="login-form" class="col-lg-offset-1 col-lg-10 mx-auto" action="" method="post" role="form" style="display: block;">
+                                    <form id="login-form" class="col-lg-offset-1 col-lg-10 mx-auto" method="post" role="form" style="display: block;">
                                         <div class="form-group input-group">
                                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" required placeholder=" ">
+                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" required placeholder=" " autocomplete="on">
                                             <label class="form-control-placeholder" for="username">Username</label>
                                         </div>
 
@@ -50,7 +49,7 @@
                                         </div>
                                         
                                         <div class="col-sm-6 col-sm-offset-3 mx-auto">
-                                            <button type="submit" name="login-submit" id="login-submit" tabindex="3" class="form-control btn btn-login" value="LOGIN" autocomplete="off">Login</button>
+                                            <button type="submit" name="login-submit" id="login-btn" tabindex="3" class="form-control btn btn-login" value="LOGIN" autocomplete="off">Login</button>
                                         </div>
                                         <div class="mess"></div>
                                     </form>

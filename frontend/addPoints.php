@@ -13,9 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/rating.js"></script>
     <title>Online act</title>
 </head>
 <body>
@@ -27,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="">Rating<span class="sr-only"></span></a>
+                <a class="nav-link" href="rating.php">Rating<span class="sr-only"></span></a>
             </li>
             <?php
             
@@ -44,11 +41,9 @@
     </div>
 </nav>
 
-<!-------- RATING -------->
+<!-------- ADD POINTS -------->
 <div class="container">
-    <canvas id="myChart" width="960" height="500">
 
-    </canvas>
 </div>
 
 </body>

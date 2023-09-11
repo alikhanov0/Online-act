@@ -1,4 +1,5 @@
 $(document).ready(function (){
+    console.log("A");
     $('#login-form').submit(function (e) {
         const name = document.getElementById("username").value;
         const pass = document.getElementById("password").value;
