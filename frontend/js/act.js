@@ -1,3 +1,5 @@
+gVar = 0;
+
 document.addEventListener("DOMContentLoaded", function() {
     // Обработчик клика на элементы <a>
     document.querySelectorAll(".dropdown-item").forEach(function(item) {
@@ -5,16 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
             e.preventDefault();
             
             // Получаем значение атрибута data-value
-            var value = this.getAttribute("data-value");
-            
-            // Отправляем AJAX-запрос на сервер, передавая значение value
-            // Ваш код для обработки клика на элементы <a>...
+            var value = Number(this.getAttribute("data-value"));
+            gVar = value;
 
             $.ajax({
                 type: 'POST',
                 url: '../backend/acts.php',
                 data: { value: value },
-                dataType: 'json', // Укажите, что ожидается JSON-ответ
+                dataType: 'json',
                 success: function(response) {
                     // Обрабатываем ответ от сервера
                     console.log(response);
@@ -153,11 +153,8 @@ $("#button1").on("click", function () {
   const student_id = $("#student").val();
   const act_type = $("#act_types").val();
   const user_id = $("#user").text();
-  console.log("student_id: " + student_id);
-console.log("act_type: " + act_type);
-console.log("user_id: " + user_id);
 
-  $data = { student: student_id, act: act_type, user: user_id};
+  $data = { student: student_id, act: act_type, user: user_id, points: gVar};
   $.ajax({
     type: "POST",
     url: "../backend/writeAct.php",
@@ -165,9 +162,14 @@ console.log("user_id: " + user_id);
     dataType: "json",
     success: function(response) {
       console.log(response);
+      $('#ModalCenter').modal('show'); // Показать модальное окно
     },
     error: function(xhr, status, error) {
       console.error("Ошибка запроса: " + error);
     }
   });
 });
+
+function closeModal(){
+  $('#ModalCenter').modal('hide');
+}

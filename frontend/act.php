@@ -106,15 +106,38 @@
                 </div>
 
                 <div id="btn">
-                    <button id="button1" class="btn btn-danger btn-lg" type="button" style="margin-top: 50px" aria-expanded="false">
+                    <button id="button1" class="btn btn-danger btn-lg" type="button" style="margin-top: 50px" aria-expanded="false" data-toggle="modal" data-target="#ModalCenter">
                         Написать акт
                     </button>
+
+                    <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Акт</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <div class="modal-body">
+                                    Акт успешно написан!
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModal()">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             </center>
         </div>
     </div>
 </div>
+
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
