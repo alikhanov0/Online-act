@@ -23,6 +23,7 @@ try {
         $response = array('success' => true);
         // Возвращаем JSON-ответ
         
+        $_SESSION['user_id'] = $user['id'];
         $_SESSION['first_name'] = $user['first_name'];
         $_SESSION['last_name'] = $user['last_name'];
         $_SESSION['role'] = $user['role'];

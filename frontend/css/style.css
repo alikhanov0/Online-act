@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+
 body {
     background-color: rgb(151, 255, 151);
+}
+
+#choose {
+  margin-top: 15%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
 }
 
 .navbar-brand {
@@ -12,7 +20,19 @@ body {
 }
 
 .container {
-    margin-top: 5%;
+  background-color: #f4ebeb;
+  border-radius: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#act-types {
+  font-family: 'Montserrat', sans-serif;
+  font-size: larger;
+}
+
+.btn-danger {
+  margin-top: 30%;
 }
 
 .row {

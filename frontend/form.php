@@ -24,7 +24,7 @@
     </div> -->
 </nav>
 
-        <div class="container">
+        <div class="container" style="background-color: #ffffff00;">
             <div class="col-md-6 col-md-offset-3 mx-auto my-auto">
                 <div class="panel panel-login">
                     <div class="panel-heading">

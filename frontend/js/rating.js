@@ -32,9 +32,9 @@ function createChart(data) {
             datasets: [{
                 label: 'Рейтинг',
                 data: values,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Цвет столбцов
+                backgroundColor: 'rgba(163, 59, 161, 0.8)', // Цвет столбцов
                 borderColor: 'rgba(75, 192, 192, 1)', // Цвет границ столбцов
-                borderWidth: 1
+                borderWidth: 5
             }]
         },
         options: {

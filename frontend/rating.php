@@ -27,15 +27,15 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="">Rating<span class="sr-only"></span></a>
+                <a class="nav-link" href="">Рейтинг<span class="sr-only"></span></a>
             </li>
             <?php
             
             if($_SESSION['role'] > 0){
-                echo '<li class="nav-item active"> <a class="nav-link" href="act.php">Write an act<span class="sr-only"></span></a></li>';
+                echo '<li class="nav-item active"> <a class="nav-link" href="act.php">Написать акт<span class="sr-only"></span></a></li>';
             }
             if($_SESSION['role'] > 1){
-                echo '<li class="nav-item active"> <a class="nav-link" href="addPoints.php">Add points<span class="sr-only"></span></a></li>';    
+                echo '<li class="nav-item active"> <a class="nav-link" href="addPoints.php">Добавить баллы<span class="sr-only"></span></a></li>';    
             }
 
             ?>
