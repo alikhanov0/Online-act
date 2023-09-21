@@ -153,11 +153,15 @@ $("#button1").on("click", function () {
   const student_id = $("#student").val();
   const act_type = $("#act_types").val();
   const user_id = $("#user").text();
+  console.log("student_id: " + student_id);
+console.log("act_type: " + act_type);
+console.log("user_id: " + user_id);
+
   $data = { student: student_id, act: act_type, user: user_id};
   $.ajax({
     type: "POST",
     url: "../backend/writeAct.php",
-    data: { $data },
+    data: $data,
     dataType: "json",
     success: function(response) {
       console.log(response);
