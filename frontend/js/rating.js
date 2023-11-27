@@ -16,25 +16,24 @@ function fetchData() {
 
 function createChart(data) {
     var ctx = document.getElementById('myChart').getContext('2d');
-    var labels = []; // Массив меток для оси X
-    var values = []; // Массив значений для оси Y
+    var labels = []; 
+    var values = [];
 
-    // Преобразование данных из формата, который вы получили с сервера
     data.forEach(function(item) {
-        labels.push(item.shanyrak_name); // Замените на поле, содержащее метку
-        values.push(item.rating); // Замените на поле, содержащее значение
+        labels.push(item.shanyrak_name); 
+        values.push(item.rating); 
     });
 
     var myChart = new Chart(ctx, {
-        type: 'bar', // Тип графика (гистограмма, можно выбрать другой)
+        type: 'bar', 
         data: {
             labels: labels,
             datasets: [{
                 label: 'Рейтинг',
                 data: values,
-                backgroundColor: 'rgba(163, 59, 161, 0.8)', // Цвет столбцов
-                borderColor: 'rgba(75, 192, 192, 1)', // Цвет границ столбцов
-                borderWidth: 5
+                backgroundColor: 'rgba(226,226,226, 1)', 
+                borderColor: 'rgba(0, 0, 0, 1)', 
+                borderWidth: 2
             }]
         },
         options: {

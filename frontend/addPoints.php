@@ -41,6 +41,10 @@
 
         </ul>
     </div>
+
+    <button class="btn navbar-btn ml-auto" id="exit" style="height:50px; width: 50px; margin-top: auto; padding:0; border:0; margin-right:15%">
+            <img src="exit.png" style="width:50px; height: 50px;"alt="Button Image">
+        </button>
 </nav>
 
 <p style="display:none;" id="user"><?php if (isset($_SESSION['user_id'])) {
@@ -70,7 +74,7 @@
 
     <center>
     <div id="btn">
-        <button id="button1" class="btn btn-info btn-lg" type="button" style="margin-top: 5%; margin-bottom: 10%;" aria-expanded="false" data-toggle="modal" data-target="#ModalCenter">
+        <button id="button1" class="btn btn-lg" type="button" style="margin-top: 5%; margin-bottom: 10%;" aria-expanded="false" data-toggle="modal" data-target="#ModalCenter">
             Далее
         </button>
 
@@ -97,6 +101,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
     </center>
 </div>
@@ -122,7 +127,7 @@
             </select>
 
             <div id="block" style="display:none;">
-                    <div>
+                <div>
                     <p id="choose">Выберите ученика</p>
                     <select name="" id="student">
                         <option value="" disabled selected>Выберите ученика</option>
@@ -164,8 +169,9 @@
 
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/addPoints.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/addPoints.js"></script>
+<script src="js/exit.js"></script>
 
 </body>
 </html>

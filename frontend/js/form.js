@@ -1,32 +1,36 @@
-$(document).ready(function (){
-    $('#login-form').submit(function (e) {
-        e.preventDefault();
-        const name = document.getElementById("username").value;
-        const pass = document.getElementById("password").value;
-        const data = {
-            username: name,
-            password: pass
-        };
-        console.log(name);
+const msalConfig = {
+    auth: {
+        clientId: 'e5a415a5-cebb-417a-875a-197dcdc73b0e',
+        authority: 'https://login.microsoftonline.com/f8cdef31-a31e-4b4a-93e4-5f571e91255a',
+        redirectUri: 'http://localhost/online-act/frontend/rating.php',
+    },
+};
+
+const msalInstance = new Msal.UserAgentApplication(msalConfig);
+
+msalInstance.loginPopup()
+    .then(response => {
+        const userObjectId = response.account.idTokenClaims.oid;
+        const userEmail = response.account.userName;
+
         $.ajax({
+            url: '../backend/auth.php',
             type: 'POST',
-            url : 'backend/auth.php',
-            data: data,
-            success: function(response){
-                console.log("Success!");
-                console.log(response);
-                if (response.success) {
-                    window.location.href = 'frontend/rating.php';
-                } else {
-                    console.log("Authentication failed.");
-                }
+            data: {
+                email: userEmail
             },
-            error: function(error){
-                console.error("Error:", error); // Вывести сообщение об ошибке
+            success: function(data) {
+                window.location.href = 'rating.php';
+            },
+            error: function(error) {
+                
             }
         });
-    });  
-});
+    })
+    .catch(error => {
+        console.error("Ошибка аутентификации", error);
+    });
+
 
 $(function () {  
     $(".form-group input").on("checkval", function () {
